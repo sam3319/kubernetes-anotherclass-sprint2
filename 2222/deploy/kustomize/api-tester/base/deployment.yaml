@@ -13,7 +13,7 @@ spec:
         kubernetes.io/hostname: k8s-master
       containers:
         - name: api-tester-2222
-          image: 1pro/api-tester:v1.0.0
+          image: sam3319/api-tester:v1.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -26,7 +26,7 @@ spec:
               path: "/startup"
               port: 8080
             periodSeconds: 5
-            failureThreshold: 24
+            failureThreshold: 60
           readinessProbe:
             httpGet:
               path: "/readiness"
