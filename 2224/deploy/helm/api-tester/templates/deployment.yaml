@@ -50,7 +50,7 @@ spec:
               path: "/startup"
               port: 8080
             periodSeconds: 5
-            failureThreshold: 24
+            failureThreshold: 60
           livenessProbe:
             httpGet:
               path: "/liveness"
